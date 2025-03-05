@@ -3,183 +3,267 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crispy King - Alaminos City, Pangasinan</title>
-    <style>
-        /* General styling */
+    <title>TAKOMAKIRA</title>
+    <style type="text/css">
+        /* Resetting some default browser styles */
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+        
+        /* Body and general page settings */
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
+        font-family: 'Arial', sans-serif;
+        background-color: #f7f7f7;
+        color: #4f4f4f;
+        line-height: 1.6;
         }
-
+        
+        h1, h2, h3 {
+        font-weight: 600;
+        color: #FF6347;
+        }
+        
+        /* Header styles */
         header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
+        background-color: #2A3D4E;
+        color: white;
+        padding: 20px;
+        text-align: center;
         }
-
+        
+        header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        }
+        
         header nav ul {
-            list-style-type: none;
-            padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
         }
-
+        
         header nav ul li {
-            display: inline;
-            margin: 0 15px;
+        display: inline;
         }
-
+        
         header nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: 400;
+        text-transform: uppercase;
         }
-
-        header img {
-            max-width: 100%;
-            height: auto;
+        
+        header nav ul li a:hover {
+        color: #FF6347;
+        transition: 0.3s ease;
         }
-
-        h1, h2 {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        
+        /* Menu Section Styles */
+        #menu {
+        padding: 60px 10%;
+        background-color: #fff;
         }
-
-        main {
-            padding: 20px;
-            text-align: center;
+        
+        #menu h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 30px;
         }
-
-        section {
-            margin-bottom: 40px;
+        
+        .menu-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        justify-items: center;
         }
-
-        /* Featured products section */
-        .products {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 30px;
+        
+        .menu-item {
+        background-color: #f9f9f9;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding: 15px;
+        text-align: center;
+        overflow: hidden;
         }
-
-        .product {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 250px;
-            padding: 15px;
-            text-align: center;
-            transition: transform 0.3s ease;
+        
+        .menu-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
         }
-
-        .product:hover {
-            transform: translateY(-10px);
+        
+        .menu-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
         }
-
-        .product img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
+        
+        .menu-description {
+        padding: 20px;
         }
-
-        .product h3 {
-            color: #333;
-            margin-top: 15px;
+        
+        .menu-description h3 {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
         }
-
-        .product p {
-            color: #777;
+        
+        .menu-description p {
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 15px;
         }
-
-        .product button {
-            background-color: #333;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 15px;
-            transition: background-color 0.3s;
+        
+        .price {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #FF6347;
         }
-
-        .product button:hover {
-            background-color: #555;
+        
+        /* About Section Styles */
+        #about {
+        padding: 60px 10%;
+        background-color: #EFEFEF;
+        text-align: center;
         }
-
-        footer {
-            text-align: center;
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        
+        #about h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
         }
+        
+        #about p {
+        font-size: 1.2rem;
+        color: #555;
+        max-width: 800px;
+        margin: 0 auto;
+        }
+        
+        /* Contact Section Styles */
+        #contact {
+        padding: 60px 10%;
+        background-color: #fff;
+        text-align: center;
+        }
+        
+        #contact h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        }
+        
+        #contact p {
+        font-size: 1.2rem;
+        color: #555;
+        margin-bottom: 10px;
+        }
+        
+        #contact a {
+        color: #FF6347;
+        font-weight: bold;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        }
+        
+        #contact a:hover {
+        color: #2A3D4E;
+        }
+        
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to Crispy King - Alaminos City, Pangasinan</h1>
+        <h1>Takomakira</h1>
+        <img src="https://media-hosting.imagekit.io//0c3ba27b6f0145d6/inbound7612351329878190123.jpg?Expires=1835780498&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=RgBcH63NwSchQILn8xGCf~glogcuOgansWh-tKYAwNhyR8bzbPl3UYK-r2oz36dWz4uE8SR6sYkg2-ciDXfyVcsGd8~gFECm4x5MKjPZtyR8CTdle8~oW1pEF6OP8T9UNrDfQkYY6w8dqjf0yaWAOmEsf3ZGHnQkvtxt3rfpdyW9lsF1aHBhZYhW8sxmVsNHh6FIlrOnlEFt-Ejw9Gb7bHwStIlFHuIUjpKNSy82ZfIxqZ6EN6GByMRxLjgp5nXNn0fCMEgB-pH28RkAi2VEoKnFYnX15lgFJHYkreVjL~DivAHTllE4swII2cMIfR8iBJJimm9lAh9uFxDJDwkwEg__" alt="Takomakira"
+        width="200" height="200">
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#location">Location</a></li>
             </ul>
         </nav>
-        <img src="1.jpg" width="100%" height="auto">
     </header>
-    <main>
-        <section>
-            <h2>Our Services</h2>
-            <p>Welcome to Crispy King in Alaminos City, Pangasinan! We offer a wide range of delicious crispy fried foods that will satisfy your cravings. Visit us today and experience the best in fried chicken, burgers, and sides!</p>
-        </section>
-        <section>
-            <h2>Featured Products</h2>
-            <p>Check out our best-selling products available at our Alaminos City branch.</p>
-            <div class="products">
-                <!-- Product 1 -->
-                <div class="product">
-                    <img src="crispy_chicken.jpg" alt="Crispy Chicken" width="200" height="200">
-                    <h3>Crispy Chicken</h3>
-                    <p>A crunchy and juicy fried chicken that will satisfy your taste buds.</p>
-                    <button>Add to Cart</button>
-                </div>
 
-                <!-- Product 2 -->
-                <div class="product">
-                    <img src="chicken_burger.jpg" alt="Chicken Burger" width="200" height="200">
-                    <h3>Chicken Burger</h3>
-                    <p>Delicious chicken patty with fresh toppings on a soft bun.</p>
-                    <button>Add to Cart</button>
-                </div>
+    <section id="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-container">
+    <div class="menu-item">
+    <img src="https://media-hosting.imagekit.io//ed1e41eb48fe4c66/inbound6923578582698458166.jpg?Expires=1835781358&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Bo6Cgtotl~EI~z0px83yU5qL6vmw2YEYwXEjfb9H2BGsMiKm5i3vEAGnLTAGSepL0L8eKzzjkEOXqObX5UTKqx9RG5ZE7C3tRWXyz~bcDwsAIGXmZ0niDyOe9rhEU7X4gRZY-82Je6EwAATuanUT1q9WxFB7PTz4rkadfFDPRIhQcf7O4GFkNo~Khz0m-NjzaY5KQUF03vWbOUHlD-PwOV-PasOAUD-81YDRC6PqSMgJFZKifU9-msvn3EKpMN29Zqqcyy5XZH1eyowkc7~kQTFYc9j6v0lw5ZCeSsfbGh0CdCY~5FuFzNvQnH5m3rZETJXucimYZNk5-GlJb5D3Rg__" alt="Donburi">
+    <div class="menu-description">
+    <h3>Donburi (Rice Meal)</h3>
+    <p>"Have a delicious meal that definitely satisfy your self!
+    </p>
+    <div class="price">₱119,₱ 129, ₱139,₱159, ₱169, ₱199, ₱239, ₱249</div>
+    </div>
+    </div>
+    <div class="menu-item">
+    <img src="https://media-hosting.imagekit.io//e92daf6dcbc14dd5/inbound2864565144139264566.jpg?Expires=1835782179&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=AgN09bGfUgSpT5VWxjrQH~fRVS4jGWhMx3k1rC7RzyVCLbB7ex6Pjuhls3ZjgIPvTFZTTD0vCOWtxo4H70tbe7m35ylkXSgpayuy8kmg-QK9KgWcItm6s3ZQx0TfsWwGBU6ksl9KPYSkk~T8AEhnlHex~1jfxYFe8Ee3WLVkxXI22MOn0X~QTYnV6fZH5LHlIUP8LWCk2vFnBbEqtF40RiXAuJjkiOdKi4ZYlW6J7P-d5RigCt06RKCHu3LCeHX6oSYOdodogybRSOG-HCtT0mMG1Po2HzDrDZFk6hrMv-c7Chah6KrqqKls7vpIvJqGsdxiba~fBlxhvRolCG3n6w__" alt="Sushiroll">
+    <div class="menu-description">
+    <h3>Sushiroll</h3>
+    <p>"Have a delicious make that definitely satisfy your self!"
+    </p>
+    <div class="price">₱129,₱139,₱149,₱189,₱199</div>
+    </div>
+    </div>
+    <div class="menu-item">
+    <img src="https://media-hosting.imagekit.io//fcf361d690a9403c/inbound2064821989869925564.jpg?Expires=1835784706&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Wjo1djIrh1fWTQMOSpYs~kjyw63cB85kz1aEUoG3JXlNT43tm39gDHgAM~EcEcKjTy8BC-VReIyU3s~tKEz95RGWRKDDYvz~FYmDX3UnnGMhHYoD1WQ5PJXawhGDj23Uw9F7x3cH2khOCyhebF431kE0u3aY~6d62FhNGGGhlcRQOy3448OxbGotpk9WsD2GPslTbE3wmsjaG4ieJeUpQ1lXWxdU7M8gh1-h4gvHmCdBw5woaHn5EESZISaAcWQEqAAwFbooMt9fMOcFU1dANx9Savw-WEmR3mwu1RcqIoV9~NjJVFZNI6V1~ONXPE7pQgKe3sv8zqBoTTzNcDCgLA__" alt="Ramen">
+    <div class="menu-description">
+    <h3>Ramen</h3>
+    <p>Have a delicious make that definitely satisfy your self!
+    </p>
+    <div class="price">₱179,₱ 189, ₱199,₱209, ₱229, ₱239, ₱249, ₱299</div>
+    </div>
+    </div>
+    <div class="menu-item">
+    <img src="https://media-hosting.imagekit.io//3fa279ceaa9145a8/inbound6668220534560061086.jpg?Expires=1835785131&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=PYiYvKykX5HZlxQA-A3JQR4Ioyr0JYBkraMyXcmDQ4zv5Db-SODPCODXFREM7rexa67I3TBTK9MZ-fOSxn5x01mXKxMBGOKP2FfdaczX5Ml8pOL6rI02Luq0OezQxtzHUaNS7OyLGooEc~YK4t1rlVW64n9DeVXO4tvxGSgMJV2jTjJRhN-Djfr85YhfzZwPwZBPKx2Cky64bdOJskUJGkuqvcJr3XQWf7-9pLeFLj7a1KlZG0r7sZVPD~A8X1Cxb7qsvdeo4Ga076vnVN1EUlqy3TawqWgzpBlDwnkygGpf9AX4IJvs-QpzW9yOjRbq8vRXxVjnjtkL1P7D1JsHAw__" alt="Agemono&Noodles">
+    <div class="menu-description">
+    <h3>Agemono & Noodles</h3>
+    <p>Have a delicious make that definitely satisfy your self!
+    
+    </p>
+    <div class="price">₱129,₱139,₱149,₱199</div>
+    </div>
+    </div>
+    <div class="menu-item">
+    <img src="https://media-hosting.imagekit.io//0a2bb690dafc42ba/inbound492511859848002628.jpg?Expires=1835785704&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=REDoi-dhl0MSQU5R5ycjwiyPANgDjw-iUbBZupn1~1VFqZzhprZPgcE8pPNu2FoE93IE7znxkGk8v-gWeLckcb5WNA66GxLxsUV2xYVahQfiTXh8R5dJDUAHov0cW9rzGSVQ5bZwTPZEWSqqZ8DMbwUDTmpD8J2K3jFqGFQMbbRXxnjZ9MsAiDDdH1MLg0iFmCOCTeQNKMqzap3N80cxJ7mlzvScQ44Eu2taPpwUWg8asPO2vgB0Oh6z-REQqFNSnxrUUsYXewh6bxqYbr2dxTYmkEpwo2mkgUe~sbdODgBgqmznNdydH~YC1dIBVzf4-ej6vDZKA-~7VNWHLLjjMA__" alt="Sashimi & Nigiri">
+    <div class="menu-description">
+    <h3>Sushimi & Nigiri</h3>
+    <p>Have a delicios make that definitely satisfy your self!
+    
+    </p>
+    <div class="price">"
+            <!-- Menu items here -->
+        </div>
+    </section>
 
-                <!-- Product 3 -->
-                <div class="product">
-                    <img src="crispy_fries.jpg" alt="Crispy Fries" width="200" height="200">
-                    <h3>Crispy Fries</h3>
-                    <p>Perfectly fried golden fries to complement your meal.</p>
-                    <button>Add to Cart</button>
-                </div>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Welcome to Takomakira.  Whether you're looking for a quick treat or a place to hang out, we're here to serve you!</p>
+    </section>
 
-                <!-- Product 4 -->
-                <div class="product">
-                    <img src="fried_wings.jpg" alt="Fried Wings" width="200" height="200">
-                    <h3>Fried Wings</h3>
-                    <p>Spicy and crispy wings for a perfect snack.</p>
-                    <button>Add to Cart</button>
-                </div>
-            </div>
-        </section>
-        <section>
-            <h2>Visit Us in Alaminos City!</h2>
-            <p>We are located in the heart of Alaminos City, Pangasinan, known for its famous Hundred Islands and delicious local dishes. Drop by Crispy King today and enjoy your favorite crispy treats!</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Crispy King - Alaminos City, Pangasinan. All rights reserved.</p>
+    <section id="contact">
+    <h2>Contact Us</h2>
+    <p style="text-align: center;">Have questions? Reach out to us:</p>
+    <p style="text-align: center;"><strong>Phone:</strong> 09776276579</p>
+    <p style="text-align: center;"><strong>Facebook:</strong> <a href="https://www.facebook.com/Takoramaki" target="_blank" style="color: #ffcc00;">Takomakira Alaminos</a></p>
+    
+    </a>
+    </p>
+    
+    <section id=" Location">
+    <h2>Location</h2>
+    <strong>Visit Us:</strong> 
+    <a href="https://www.google.com/maps/place/TAKOMAKIRA,+5+San+Jose+Dr,+Alaminos,+Pangasinan/@16.1568402,119.9795542,16z/data=!4m6!3m5!1s0x3393dde67e6ebe6f:0x9cd222408a15060a!8m2!3d16.1568402!4d119.9795542!16s%2Fg%2F11jz1jx9q8?hl=en" target="_blank" style="color: #ffcc00;">
+    San Jose Drive, Alaminos City, Pangasinan
+    </a>
+    </p>
+    </section>
+     <footer>
+        <p>&copy; 2025 Takomakira. All Rights Reserved.</p>
     </footer>
-</body>
+    </body>
 </html>
